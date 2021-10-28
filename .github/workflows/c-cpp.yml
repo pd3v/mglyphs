@@ -64,11 +64,11 @@ jobs:
         - {
             name: "macOS Latest Clang",
             os: macos-latest,
-            artifact: "macos_clang.7z",
+            artifact: "macos_clang.zip",
             build_type: "Release",
             cc: "clang",
             cxx: "clang++",
-            archiver: "7za a",
+            archiver: "zip a",
             generators: "Ninja"
           }
 
