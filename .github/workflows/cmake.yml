@@ -24,13 +24,13 @@ jobs:
       - name: Build
         run: cmake --build ./build --config Release
 
-- name: Create Artifact
-  run: |
-    mkdir release
-    cp build/main release/main
-    
-- name: Publish Artifact
-  uses: actions/upload-artifact@v2
-  with:
-    name: cppandaction release
-    path: release
+      - name: Create Artifact
+        run: |
+        mkdir release
+        cp build/main release/main
+      
+      - name: Publish Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: cppandaction release
+          path: release
