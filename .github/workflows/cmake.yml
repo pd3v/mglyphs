@@ -8,8 +8,8 @@ on:
     types: [closed]
 
 jobs:
-  release_web:
-    name: cppandaction release
+  release_linux:
+    name: linux cppandaction release
     runs-on: ubuntu-latest
 
     steps:
@@ -35,7 +35,9 @@ jobs:
           name: cppandaction release
           path: release
 
-  runs-on: macOS 11
+  release_macos:
+    name: macOS cppandaction release
+    runs-on: macOS 11
 
     steps:
       - uses: actions/checkout@v2
