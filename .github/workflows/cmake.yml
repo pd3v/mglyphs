@@ -34,3 +34,28 @@ jobs:
         with:
           name: cppandaction release
           path: release
+
+  runs-on: macOS 11
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Create Build Directory
+        run: cmake -E make_directory ${{github.workspace}}/build
+
+      - name: Configure CMake
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        run: cmake --build ./build --config Release
+
+      - name: Create Artifact
+        run: |
+          mkdir release
+          cp build/main release/main
+      
+      - name: Publish Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: cppandaction release
+          path: release
