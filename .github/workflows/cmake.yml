@@ -29,10 +29,10 @@ jobs:
           mkdir release
           cp build/main release/main
       
-      - name: Publish Artifact
+      - name: Publish Linux Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: cppandaction release
+          name: cppandaction linux release
           path: release
 
   release_macos:
@@ -56,8 +56,8 @@ jobs:
           mkdir release
           cp build/main release/main
       
-      - name: Publish Artifact
+      - name: Publish MacOS Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: cppandaction release
+          name: cppandaction macOS release
           path: release
