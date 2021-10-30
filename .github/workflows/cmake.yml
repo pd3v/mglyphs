@@ -81,7 +81,7 @@ jobs:
       - name: Create Artifact
         run: |
           mkdir release
-          Copy-Item build/main.exe release/main.exe
+          Copy-Item build/main release/main.exe
       
       - name: Publish Windows Artifact
         uses: actions/upload-artifact@v2
