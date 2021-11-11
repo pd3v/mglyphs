@@ -81,7 +81,7 @@ jobs:
       - name: Build
         run: cmake --build ./build --config Release
 
-      - name: Create Artifact
+      # - name: Create Artifact
       #   run: |
       #     md release
       #     copy build/main release/main
