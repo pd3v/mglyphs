@@ -8,32 +8,32 @@ on:
     types: [closed]
 
 jobs:
-  # release_linux:
-  #   name: linux cppandaction release
-  #   runs-on: ubuntu-latest
+  release_linux:
+    name: linux cppandaction release
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - uses: actions/checkout@v2
+    steps:
+      - uses: actions/checkout@v2
 
-  #     - name: Create Build Directory
-  #       run: cmake -E make_directory ${{github.workspace}}/build
+      - name: Create Build Directory
+        run: cmake -E make_directory ${{github.workspace}}/build
 
-  #     - name: Configure CMake
-  #       run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+      - name: Configure CMake
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 
-  #     - name: Build
-  #       run: cmake --build ./build --config Release
+      - name: Build
+        run: cmake --build ./build --config Release
 
-  #     - name: Create Artifact
-  #       run: |
-  #         mkdir release
-  #         cp build/main release/main
+      - name: Create Artifact
+        run: |
+          mkdir release
+          cp build/main release/main
       
-  #     - name: Publish Linux Artifact
-  #       uses: actions/upload-artifact@v2
-  #       with:
-  #         name: cppandaction linux release
-  #         path: release
+      - name: Publish Linux Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: cppandaction linux release
+          path: release
 
   # Build for macOs is working
   # release_macos:
@@ -63,8 +63,9 @@ jobs:
   #         name: cppandaction macOS release
   #         path: release
 
-  # Build for macOs is working )
+  # Build for macOs is working --
 
+  # Artifac creation not working
   release_windows:
     name: windows cppandaction release
     runs-on: windows-latest
@@ -83,7 +84,7 @@ jobs:
 
       - name: Create Artifact
         run: |
-          md release
+          mkdir release
           copy build/main.exe release/main.exe
       
       - name: Publish Windows Artifact
@@ -91,4 +92,4 @@ jobs:
         with:
           name: cppandaction windows release
           path: release
-        
+  # Artifac creation not working --      
