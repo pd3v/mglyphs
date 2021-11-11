@@ -81,14 +81,15 @@ jobs:
       - name: Build
         run: cmake --build ./build --config Release
 
-      # - name: Create Artifact
+      - name: Create Artifact
       #   run: |
       #     md release
       #     copy build/main release/main
       
-      # - name: Publish Windows Artifact
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: cppandaction windows release
-      #     path: release
+      - name: Publish Windows Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: cppandaction windows release
+          # path: release (original line)
+          path: build
         
