@@ -4,7 +4,7 @@ set (CMAKE_CXX_STANDARD 17)
 
 project(main)
 
-
+add_executable(main main.cpp)
 
 add_subdirectory(externals/diatonic)
 
@@ -18,11 +18,9 @@ target_link_directories(
   PUBLIC externals/diatonic/src/
 )
 
-add_executable(main main.cpp)
-
 target_link_libraries(
   ${PROJECT_NAME}
-  LINK_PUBLIC externals/diatonic/ 
+  LINK_PUBLIC externals/diatonic/
 )
 
 # install(TARGETS main)
