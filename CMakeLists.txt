@@ -20,7 +20,7 @@ target_link_directories(
 
 target_link_libraries(
   ${PROJECT_NAME}
-  LINK_PUBLIC externals/diatonic/
+  LINK_PUBLIC diatonic
 )
 
 # install(TARGETS main)
