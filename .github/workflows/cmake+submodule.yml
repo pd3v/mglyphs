@@ -26,13 +26,13 @@ jobs:
       - name: Build
       run: cmake --build ./build --config Release
 
-      - name: Create Artifact
-      run: |
-        mkdir release
-        cp build/main release/main
+      # - name: Create Artifact
+      # run: |
+      #   mkdir release
+      #   cp build/main release/main
       
-      - name: Publish MacOS Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: cpp+libandaction macOS release
-          path: release
+      # - name: Publish MacOS Artifact
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: cpp+libandaction macOS release
+      #     path: release
