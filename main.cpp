@@ -8,8 +8,6 @@ int main() {
 
   // create scales
   auto DSharpMajor = scale(Ds,scale_::major);
-  auto DSharpPentaMajorOctave4 = scale("ds4",scale_::pentatonicmajor);
-
   std::cout << "D# Major 2nd note is:" << DSharpMajor.at(1) << std::endl;
 
   return 0;
