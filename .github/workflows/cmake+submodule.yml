@@ -10,9 +10,8 @@ on:
 jobs:
   # Build for macOs
   release_macos:
-    name: macOS cppandaction release
+    name: macOS cppandaction+diatonic lib release
     runs-on: macos-11
-    # runs-on: ${{matrix.os}}
 
     steps:
     - uses: actions/checkout@v2
@@ -24,7 +23,6 @@ jobs:
       run: cmake -E make_directory ${{github.workspace}}/build
 
     - name: Configure CMake
-      # run: cmake -S . -B build -DRTMIDI_API_JACK=OFF RTMIDI_BUILD_TESTING=OFF CMAKE_BUILD_TYPE=Release
       run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 
     - name: Build
@@ -34,8 +32,9 @@ jobs:
       run: |
         mkdir release
         cp build/main release/main
+        cp build/externals release/externals
     
-    - name: Publish MacOS Artifact
+    - name: Publish macOS Artifact
       uses: actions/upload-artifact@v2
       with:
         name: main macOS release
