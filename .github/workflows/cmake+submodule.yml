@@ -34,7 +34,6 @@ jobs:
       run: |
         mkdir release
         cp build/main release/main
-        cp build/liddiatonic.* release/liddiatonic.*
     
     - name: Publish MacOS Artifact
       uses: actions/upload-artifact@v2
