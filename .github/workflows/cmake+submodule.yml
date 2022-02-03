@@ -11,8 +11,8 @@ jobs:
   # Build for macOs
   release_macos:
     name: macOS cppandaction release
-    # runs-on: macos-11
-    runs-on: ${{matrix.os}}
+    runs-on: macos-11
+    # runs-on: ${{matrix.os}}
 
     steps:
     - uses: actions/checkout@v2
