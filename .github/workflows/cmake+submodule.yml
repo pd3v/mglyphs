@@ -16,6 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Checkout submodules
+      run: git submodule update --init
+
       - name: Create Build Directory
         run: cmake -E make_directory ${{github.workspace}}/build
 
