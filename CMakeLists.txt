@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 set(CMAKE_CXX_STANDARD 17)
 
 set(DIATONIC_PATH externals/diatonic/)
-message(${DIATONIC_PATH})
+
 project(main)
 
 add_executable(main main.cpp)
