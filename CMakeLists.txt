@@ -1,21 +1,23 @@
 cmake_minimum_required(VERSION 3.16)
 
-set (CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 17)
+
+set(DIATONIC_PATH externals/diatonic/)
 
 project(main)
 
 add_executable(main main.cpp)
 
-add_subdirectory(externals/diatonic)
+add_subdirectory(${DIATONIC_PATH})
 
 target_include_directories(
   ${PROJECT_NAME} 
-  PUBLIC externals/diatonic/include/
+  PUBLIC ${DIATONIC_PATH}include/
 )
 
 target_link_directories(
   ${PROJECT_NAME}
-  PUBLIC externals/diatonic/
+  PUBLIC ${DIATONIC_PATH}
 )
 
 target_link_libraries(
@@ -25,7 +27,7 @@ target_link_libraries(
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
   set(CMAKE_MACOSX_RPATH 1)
-  set_target_properties(${PROJECT_NAME} PROPERTIES INSTALL_RPATH "@loader_path/../lib")
+  set_target_properties(${PROJECT_NAME} PROPERTIES INSTALL_RPATH "@loader_path/${DIATONIC_PATH}")
 endif() 
 
 #install(TARGETS main)
