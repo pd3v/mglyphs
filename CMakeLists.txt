@@ -15,7 +15,7 @@ target_include_directories(
 
 target_link_directories(
   ${PROJECT_NAME}
-  PUBLIC externals/diatonic/src/
+  PUBLIC externals/diatonic/
 )
 
 target_link_libraries(
@@ -23,4 +23,9 @@ target_link_libraries(
   LINK_PUBLIC diatonic
 )
 
-# install(TARGETS main)
+if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
+  set(CMAKE_MACOSX_RPATH 1)
+  set_target_properties(${PROJECT_NAME} PROPERTIES INSTALL_RPATH "@loader_path/../lib")
+endif() 
+
+#install(TARGETS main)
