@@ -1,5 +1,5 @@
 #include <iostream>
-#include "externals/diatonic/include/diatonic.h"
+#include "diatonic.h"
 
 using namespace scale_;
 
