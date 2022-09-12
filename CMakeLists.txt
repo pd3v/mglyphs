@@ -25,9 +25,4 @@ target_link_libraries(
   LINK_PUBLIC diatonic
 )
 
-if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
-  set(CMAKE_MACOSX_RPATH 1)
-  set_target_properties(${PROJECT_NAME} PROPERTIES INSTALL_RPATH "@loader_path/${DIATONIC_PATH}")
-endif() 
-
 #install(TARGETS main)
