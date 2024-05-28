@@ -31,7 +31,7 @@ jobs:
     - name: Create Artifact
       run: |
         mkdir release
-        cp build/examples release/examples
+        # cp build/examples release/examples
         cp -r build/externals release/externals
     
     - name: Publish macOS Artifact
