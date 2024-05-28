@@ -4,9 +4,9 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(DIATONIC_PATH externals/diatonic/)
 
-project(main)
+project(diatonics)
 
-add_executable(main main.cpp)
+add_executable(${PROJECT_NAME} examples.cpp)
 
 add_subdirectory(${DIATONIC_PATH})
 
