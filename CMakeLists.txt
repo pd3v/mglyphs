@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(DIATONIC_PATH externals/diatonic/)
 
-project(diatonics)
+project(intervals)
 
 add_executable(${PROJECT_NAME} examples.cpp)
 
