@@ -31,11 +31,11 @@ jobs:
     - name: Create Artifact
       run: |
         mkdir release
-        cp build/main release/main
+        cp build/examples release/examples
         cp -r build/externals release/externals
     
     - name: Publish macOS Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: main macOS release
+        name: intervals macOS release
         path: release
