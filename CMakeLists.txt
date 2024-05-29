@@ -4,9 +4,9 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(DIATONIC_PATH externals/diatonic/)
 
-project(intervals)
+project(mglyphs)
 
-add_executable(${PROJECT_NAME} examples.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
 
 add_subdirectory(${DIATONIC_PATH})
 
@@ -25,4 +25,4 @@ target_link_libraries(
   LINK_PUBLIC diatonic
 )
 
-#install(TARGETS main)
+#install(TARGETS ${PROJECT_NAME})
