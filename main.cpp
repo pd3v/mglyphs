@@ -32,11 +32,14 @@ int main() {
 	std::cout << "C Minor scale:\t\t";
 	printMIDI(scale(C,scale_::minor));
 
-	std::cout << "Whole notes scale:\t";
+	std::cout << "C Whole notes scale:\t";
 	printMIDI(scale(C,scale_::whole));
 
 	std::cout << "C Harmonic Minor scale:\t";
 	printMIDI(scale(C,scale_::harmonicminor));
+
+	std::cout << "C Pentatonic scale:\t";
+	printMIDI(scale(C,scale_::pentatonicminor));
 	
 	std::cout << '\n';
 	
