@@ -1,5 +1,7 @@
-# diatonic library demo code + binaries
+# mglyphs
 
 [![Release Build](https://github.com/pd3v/intervals/actions/workflows/cmake+submodule.yml/badge.svg)](https://github.com/pd3v/intervals/actions/workflows/cmake+submodule.yml)
 
-You don't need to create lists of vectors/arrays to set pre-definitions for "all" scales, chords and a given tonality chords'; create them dynamically; do it by calling functions:
+**For now**
+
+Run mglyphs in the command-line (./mglyphs) and it will output a simple list of scales' notes in MIDI values.
