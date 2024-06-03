@@ -23,7 +23,7 @@ int main() {
 
 	std::cout << "\nscales MIDI notes\n-----------------\n\n";
 
-	std::cout << "Chromatic scale:\t";
+	std::cout << "C Chromatic scale:\t";
 	printMIDI(scale(C,scale_::chromatic));
 	
 	std::cout << "C Major scale:\t\t";
