@@ -22,7 +22,8 @@ target_link_directories(
 
 target_link_libraries(
   ${PROJECT_NAME}
-  LINK_PUBLIC diatonic
+	#LINK_PUBLIC diatonic
+	diatonic
 )
 
 #install(TARGETS ${PROJECT_NAME})
