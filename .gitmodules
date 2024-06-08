@@ -1,6 +1,7 @@
 [submodule "externals/diatonic"]
 	path = externals/diatonic
 	#url = https://github.com/pd3v/diatonic.git
-	url = git@github.com:pd3v/diatonic.git
+	#url = git@github.com:pd3v/diatonic.git
+	url = ../diatonic
   ignore = untracked
 
