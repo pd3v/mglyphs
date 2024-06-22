@@ -26,4 +26,4 @@ target_link_libraries(
 	diatonic
 )
 
-#install(TARGETS ${PROJECT_NAME})
+install(TARGETS ${PROJECT_NAME})
