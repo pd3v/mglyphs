@@ -35,7 +35,7 @@ void printMIDI(const scaleT& scale) {
 }
 
 int main(int argc, char **argv) {
-	scaleT s; std::vector<std::string> sG;
+	scaleT s; scaleGlyphT sG;
 	std::string key = "c"; // C as default key
 
 	if (argc > 1) {
@@ -43,6 +43,8 @@ int main(int argc, char **argv) {
       std::string param = argv[1];
 			if (param == "-k" || param == "-key")
 				key = argv[2];
+			else
+				std::cout << "No such parameter.\n" << std::flush;
 		} catch(...) {
       std::cout << "Error in parameter.\n" << std::flush;
     }
