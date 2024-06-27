@@ -2,17 +2,17 @@ cmake_minimum_required(VERSION 3.16)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(GIT_ACTION FALSE)
-set(BUILD_>=17 TRUE)
+option(GIT_ACTION FALSE)
+option(BUILD_17 TRUE)
 
 if(APPLE AND NOT GIT_ACTION)
-  if(BUILD_>=17)
+  if(BUILD_17)
     set(CMAKE_C_COMPILER /opt/local/libexec/llvm-10/bin/clang)
     set(CMAKE_CXX_COMPILER /opt/local/libexec/llvm-10/bin/clang++)
   else()  
     set(CMAKE_C_COMPILER /usr/bin/clang)
     set(CMAKE_CXX_COMPILER /usr/bin/clang++)
-  endif(BUILD_>=17)  
+  endif(BUILD_17)
 endif(APPLE AND NOT GIT_ACTION)
 
 set(DIATONIC_PATH externals/diatonic/)
