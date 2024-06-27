@@ -38,7 +38,7 @@ int main(int argc, char **argv) {
 	scaleT s; scaleGlyphT sG;
 	std::string key = "c"; // C as default key
 
-	if (argc > 1) {
+	if (argc > 2) {
     try {
       std::string param = argv[1];
 			if (param == "-k" || param == "-key")
