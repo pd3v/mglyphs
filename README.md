@@ -2,7 +2,7 @@
 
 [![Release Build](https://github.com/pd3v/intervals/actions/workflows/cmake+submodule.yml/badge.svg)](https://github.com/pd3v/intervals/actions/workflows/cmake+submodule.yml)
 
-##### mglyphs returns a list of scales/modes and their respective notes in MIDI values.
+**mglyphs** returns a list of scales, modes and their respective notes in MIDI values based on user's key/octave input.
 
 	Command syntax:
 
@@ -10,7 +10,7 @@
 
 	param = k or key
 
-To run **mglyphs** type `./mglyphs`, press [Enter] in the command-line. This simplest version will return C scales'/modes' notes and their MIDI values, starting at c = 0.
+To run **mglyphs** type `./mglyphs`, press [Enter] in the command-line. Running it like this (without arguments) will return C scales'/modes' notes and their MIDI values, starting at c = 0 (MIDI).
 
 <pre>
 C Blues
