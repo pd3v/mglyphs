@@ -3,9 +3,9 @@
 #include <iomanip>
 #include "diatonic.h"
 
-using namespace scale_;
+// using namespace scale_;
 
-void printGlyphs(const std::vector<std::string>& scaleG) {	
+void printGlyphs(const scaleGlyphT& scaleG) {	
 	std::cout << std::left;
 
 	for (int i = 0; i < scaleG.size(); ++i)
