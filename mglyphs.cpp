@@ -3,8 +3,6 @@
 #include <iomanip>
 #include "diatonic.h"
 
-// using namespace scale_;
-
 void printGlyphs(const scaleGlyphT& scaleG) {	
 	std::cout << std::left;
 
