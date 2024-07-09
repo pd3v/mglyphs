@@ -13,7 +13,7 @@ if(APPLE AND NOT GIT_ACTION)
     set(CMAKE_C_COMPILER /usr/bin/clang)
     set(CMAKE_CXX_COMPILER /usr/bin/clang++)
   endif(BUILD_17)
-endif(APPLE AND NOT GIT_ACTION)
+endif()
 
 set(DIATONIC_PATH externals/diatonic/)
 
