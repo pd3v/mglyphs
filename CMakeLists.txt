@@ -19,7 +19,7 @@ set(DIATONIC_PATH externals/diatonic/)
 
 project(mglyphs)
 
-add_executable(${PROJECT_NAME} mglyphs.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
 
 add_subdirectory(${DIATONIC_PATH})
 
