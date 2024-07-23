@@ -22,6 +22,7 @@ void printGlyphs(const scaleGlyphT& scaleG) {
 
 void printGlyphs(const toneGlyphT& toneG) {	
 	int i = 0;
+
 	std::cout << std::left;
 	std::cout << "\n";
 
@@ -76,23 +77,22 @@ void printMIDI(const toneT& tone) {
 int main(int argc, char **argv) {
 	std::string param;
 	std::string key = "c"; // C as default key
-
 	if (argc > 2) {
     try {
       param = argv[1];
 			
-			if (param == "-s" || param == "-scales")
-				key = argv[2];
-			else if (param == "-c" || param == "-chords") 	
+			if (param == "-s" || param == "-scales" || param == "-c" || param == "-chords" || param == "-a" || param == "-all")
 				key = argv[2];
 			else
 				std::cout << "No such parameter.\n" << std::flush;
 		} catch(...) {
       std::cout << "Error in parameter.\n" << std::flush;
     }
-	}
+	} 
+	else if (argc == 1)
+		param = "-a";
 
-	if (param == "-s" || param == "-scales") {
+	if (param == "-s" || param == "-scales" || param == "-a" || param == "-all") {
 		scaleT s; scaleGlyphT sG;
 
 		std::cout << '\n' << key << " scales -> MIDI\n";
@@ -190,8 +190,9 @@ int main(int argc, char **argv) {
 		sG = toGlyphs(s);
 		printGlyphs(sG);
 		printMIDI(s);
-	} 
-	else if (param == "-c" || param == "-chords") {
+	}
+
+	if (param == "-c" || param == "-chords" || param == "-a" || param == "-all") {
 		toneT tChords; toneGlyphT tG;
 
 		std::cout << '\n' << key << " chords -> MIDI\n";
