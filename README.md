@@ -1,6 +1,6 @@
 # mglyphs
 
-[![Release Build](https://github.com/pd3v/intervals/actions/workflows/cmake+submodule.yml/badge.svg)](https://github.com/pd3v/intervals/actions/workflows/cmake+submodule.yml)
+[![.github/workflows/cmake.yml](https://github.com/pd3v/mglyphs/actions/workflows/cmake.yml/badge.svg)](https://github.com/pd3v/mglyphs/actions/workflows/cmake.yml)
 
 **mglyphs** returns a list of scales, modes, chords in a scales (notes names and MIDI values) based on user's key/octave input.
 
