@@ -2,7 +2,7 @@
 
 [![Release Build](https://github.com/pd3v/intervals/actions/workflows/cmake+submodule.yml/badge.svg)](https://github.com/pd3v/intervals/actions/workflows/cmake+submodule.yml)
 
-**mglyphs** returns a list of scales, modes and their respective notes in MIDI values based on user's key/octave input.
+**mglyphs** returns a list of scales, modes, chords in a scale and their respective notes names and MIDI values based on user's key/octave input.
 
 	Command syntax:
 
