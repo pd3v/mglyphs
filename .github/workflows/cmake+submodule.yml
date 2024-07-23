@@ -1,41 +1,48 @@
-name: Release Build
+name: mglyphs Release Build
 
 on:
   push:
-    branches: [main]
+    branches: 
+      - main
   pull_request:
-    branches: [main]
-    types: [closed]
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-  # Build for macOs
-  release_macos:
-    name: macOS cppandaction+diatonic lib release
-    runs-on: macos-11
-
+  linux_build:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Checkout submodules
-      run: git submodule update --init --recursive
-
-    - name: Create Build Directory
-      run: cmake -E make_directory ${{github.workspace}}/build
-
-    - name: Configure CMake
-      run: cmake -S . -B build -DGIT_ACTION=TRUE -DCMAKE_BUILD_TYPE=Release
-
-    - name: Build
-      run: cmake --build ./build --config Release
-
-    - name: Create Artifact
-      run: |
-        mkdir release
-        # cp build/examples release/examples
-        cp -r build/externals release/externals
-    
-    - name: Publish macOS Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: intervals macOS release
-        path: release
+      - name: Checkout
+      - uses: actions/checkout@v4
+      - name: Checkout submodules
+        run: git submodule update --init --recursive --remote
+      - name: Build Directory
+        run: cmake -E make_directory ${{github.workspace}}/build
+      - name: Run CMake
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build ./build --config Release
+      - name: mglyphs Linux Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mglyphs_v0.2_linux
+          path: ${{github.workspace}}/        
+  macos_build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@v4
+      - name: Checkout submodules
+        run: git submodule update --init --recursive --remote
+      - name: Build Directory
+        run: cmake -E make_directory ${{github.workspace}}/build
+      - name: Run CMake
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build ./build --config Release
+      - name: mglyphs macOS Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mglyphs_v0.2_macOS
+          path: ${{github.workspace}}/
