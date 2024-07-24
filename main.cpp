@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <iomanip>
-#include "diatonic.h"
+#include "../include/diatonic.h"
 
 using namespace scale_; 
 
