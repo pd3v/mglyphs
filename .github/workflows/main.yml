@@ -1,0 +1,51 @@
+name: mglyphs release build
+
+on:
+  push:
+    branches: 
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  macos_build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@v4
+      - name: Checkout submodules
+        run: git submodule update --init --recursive --remote
+      - name: Build
+        run: ./build.sh
+      - name: Remove build-only process files
+      run: |
+        rm -r ${{github.workspace}}/build/CMakeFiles
+        rm ${{github.workspace}}/build/*.cmake
+        rm ${{github.workspace}}/build/CMakeCache.txt
+        rm ${{github.workspace}}/build/Makefile
+      - name: mglyphs macOS Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mglyphs_v0.2_macOS
+          path: ${{github.workspace}}/
+  # linux_build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #     - uses: actions/checkout@v4
+  #     - name: Checkout submodules
+  #       run: git submodule update --init --recursive --remote
+  #     - name: Build Directory
+  #       run: cmake -E make_directory ${{github.workspace}}/build
+  #     - name: Run CMake
+  #       run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+  #     - name: Build
+  #       run: cmake --build ./build --config Release
+  #     - name: mglyphs Linux Artifact
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: mglyphs_v0.2_linux
+  #         path: ${{github.workspace}}/        
+  
