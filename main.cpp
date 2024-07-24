@@ -1,9 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <iomanip>
-#include "../include/diatonic.h"
-
-using namespace scale_; 
+#include "diatonic.h"
 
 void printGlyphs(const scaleGlyphT& scaleG) {	
 	std::cout << std::left;
@@ -99,50 +97,50 @@ int main(int argc, char **argv) {
 		std::cout << "-----------------\n";
 
 		std::cout <<  key << " Chromatic\n";
-		s = scale(key, chromatic);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::chromatic);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);	
 		printMIDI(s);
 		
 		std::cout << key << " Major\n";
-		s = scale(key, scale_::major);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::major);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);	
 		printMIDI(s);
 		
 		std::cout << key << " Minor\n";
-		s = scale(key, scale_::minor);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::minor);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);	
 		printMIDI(s);
 		
 		std::cout << key << " Whole notes\n";
-		s = scale(key, scale_::whole);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::whole);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);
 		printMIDI(s);
 
 		std::cout << key << " Harmonic Minor\n";
-		s = scale(key, scale_::harmonicminor);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::harmonicminor);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);
 		printMIDI(s);
 
 		std::cout << key << " Pentatonic Major\n";
-		s = scale(key, scale_::pentatonicmajor);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::pentatonicmajor);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);
 		printMIDI(s);
 
 		std::cout << key << " Pentatonic (Minor)\n";
-		s = scale(key, scale_::pentatonicminor);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::pentatonicminor);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);
 		printMIDI(s);
 
 		std::cout << key << " Blues\n";
-		s = scale(key, scale_::blues);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::blues);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);
 		printMIDI(s);
 
@@ -150,44 +148,44 @@ int main(int argc, char **argv) {
 		std::cout << "--------\n";
 
 		std::cout << key << " Ionian\n";
-		s = scale(key, scale_::ionian);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::ionian);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);
 		printMIDI(s);
 
 		std::cout << key << " Dorian\n";
-		s = scale(key, scale_::dorian);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::dorian);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);
 		printMIDI(s);
 
 		std::cout << key << " Phrygian\n";
-		s = scale(key, scale_::phrygian);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::phrygian);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);
 		printMIDI(s);
 
 		std::cout << key << " Lydian\n";
-		s = scale(key, scale_::lydian);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::lydian);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);
 		printMIDI(s);
 
 		std::cout << key << " Mixolydian\n";
-		s = scale(key, scale_::mixolydian);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::mixolydian);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);
 		printMIDI(s);
 
 		std::cout << key << " Aeolian\n";
-		s = scale(key, scale_::aeolian);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::aeolian);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);
 		printMIDI(s);
 
 		std::cout << key << " Locrian\n";
-		s = scale(key, scale_::locrian);
-		sG = toGlyphs(s);
+		s = scale_::scale(key, scale_::locrian);
+		sG = scale_::toGlyphs(s);
 		printGlyphs(sG);
 		printMIDI(s);
 	}
