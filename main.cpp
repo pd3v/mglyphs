@@ -18,7 +18,7 @@ void printGlyphs(const scaleGlyphT& scaleG) {
 	std::cout << "\n";
 }
 
-void printGlyphs(const toneGlyphT& toneG) {	
+void printGlyphs(const 	toneGlyphT& toneG) {	
 	int i = 0;
 
 	std::cout << std::left;
@@ -197,43 +197,43 @@ int main(int argc, char **argv) {
 		std::cout << "-----------------\n";
 
 		std::cout << key << " Chromatic\n";
-		tChords = tone_::tone(key, scale_::chromatic);
+		tChords = tone_::tone(key, tone_::chromatic);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
-
+		
 		std::cout << key << " Major\n";
-		tChords = tone_::tone(key, scale_::major);
+		tChords = tone_::tone(key, tone_::major);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
 
 		std::cout << key << " Minor\n";
-		tChords = tone_::tone(key, scale_::minor);
+		tChords = tone_::tone(key, tone_::minor);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
 		
 		std::cout << key << " Whole notes\n";
-		tChords = tone_::tone(key, scale_::whole);
+		tChords = tone_::tone(key, tone_::whole);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
 		
 		std::cout << key << " Harmonic Minor\n";
-		tChords = tone_::tone(key, scale_::harmonicminor);
+		tChords = tone_::tone(key, tone_::harmonicminor);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
 		
 		std::cout << key << " Pentatonic\n";
-		tChords = tone_::tone(key, scale_::pentatonicminor);
+		tChords = tone_::tone(key, tone_::pentatonicminor);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
 		
 		std::cout << key << " Blues\n";
-		tChords = tone_::tone(key, scale_::blues);
+		tChords = tone_::tone(key, tone_::blues);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
@@ -242,43 +242,43 @@ int main(int argc, char **argv) {
 		std::cout << "--------\n";
 
 		std::cout << key << " Ionian\n";
-		tChords = tone_::tone(key, scale_::ionian);
+		tChords = tone_::tone(key, tone_::ionian);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
 		
 		std::cout << key << " Dorian\n";
-		tChords = tone_::tone(key, scale_::dorian);
+		tChords = tone_::tone(key, tone_::dorian);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
 	
 		std::cout << key << " Phrygian\n";
-		tChords = tone_::tone(key, scale_::phrygian);
+		tChords = tone_::tone(key, tone_::phrygian);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
 		
 		std::cout << key << " Lydian\n";
-		tChords = tone_::tone(key, scale_::lydian);
+		tChords = tone_::tone(key, tone_::lydian);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
 		
 		std::cout << key << " Mixolydian\n";
-		tChords = tone_::tone(key, scale_::mixolydian);
+		tChords = tone_::tone(key, tone_::mixolydian);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
 		
 		std::cout << key << " Aeolian\n";
-		tChords = tone_::tone(key, scale_::aeolian);
+		tChords = tone_::tone(key, tone_::aeolian);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
 		
 		std::cout << key << " Locrian\n";
-		tChords = tone_::tone(key, scale_::locrian);
+		tChords = tone_::tone(key, tone_::locrian);
 		tG = tone_::toGlyphs(tChords);
 		printGlyphs(tG);
 		printMIDI(tChords);
