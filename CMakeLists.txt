@@ -21,6 +21,7 @@ project(mglyphs)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
+set(BUILD_SHARED OFF CACHE INTERNAL "" FORCE)
 add_subdirectory(${DIATONIC_PATH})
 
 target_include_directories(
@@ -34,9 +35,8 @@ target_link_directories(
 )
 
 target_link_libraries(
-  ${PROJECT_NAME}
-	#LINK_PUBLIC diatonic
-	diatonic
+	${PROJECT_NAME}
+	LINK_PRIVATE diatonic
 )
 
 install(TARGETS ${PROJECT_NAME})
