@@ -22,7 +22,7 @@ jobs:
     - name: Remove build-only process files
       run: |
         find ${{github.workspace}} ! -name build.sh ! -name main.cpp ! -name CMakeLists.txt -type f -delete
-        mv ${{github.workspace}}/build/mglyphs ${{github.workspace}}
+        mv ${{github.workspace}}/build/mglyphs ${{github.workspace}}/mglyphs
         rm -r ${{github.workspace}}/build
         # rm -r ${{github.workspace}}/build/CMakeFiles
         # rm ${{github.workspace}}/build/*.cmake
@@ -45,7 +45,7 @@ jobs:
     - name: Remove build-only process files
       run: |
         find ${{github.workspace}} ! -name build.sh ! -name main.cpp ! -name CMakeLists.txt -type f -delete
-        mv ${{github.workspace}}/build/mglyphs ${{github.workspace}}
+        mv ${{github.workspace}}/build/mglyphs ${{github.workspace}}/mglyphs
         rm -r ${{github.workspace}}/build
         # rm -r ${{github.workspace}}/build/CMakeFiles
         # rm ${{github.workspace}}/build/*.cmake
