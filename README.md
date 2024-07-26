@@ -2,7 +2,7 @@
 
 [![mglyphs release build](https://github.com/pd3v/mglyphs/actions/workflows/mglyphs_release_build.yml/badge.svg)](https://github.com/pd3v/mglyphs/actions/workflows/mglyphs_release_build.yml)
 
-###Install mglyphs
+### Install mglyphs
 - With **Homebrew** in your system and in *Terminal* type and Enter:
 	- `brew tap pd3v/mglyphs`
 	- `brew install mglyphs`
@@ -15,8 +15,7 @@
 	- Within that folder run *Terminal* (or equivalent) and type and Enter: `sudo chmod +x mglyphs` (your permition the execute **mglyphs**)
 	- Run **mglyphs** by typing and Enter: `./mglyphs -s d` 
 
-###Manual
-
+### Manual
 **mglyphs** returns a list of scales, modes, chords in a scales (notes names and MIDI values) based on user's key/octave input.
 
 	Command syntax:
