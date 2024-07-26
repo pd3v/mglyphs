@@ -21,10 +21,13 @@ jobs:
       run: ./build.sh
     - name: Remove build-only process files
       run: |
-        rm -r ${{github.workspace}}/build/CMakeFiles
-        rm ${{github.workspace}}/build/*.cmake
-        rm ${{github.workspace}}/build/CMakeCache.txt
-        rm ${{github.workspace}}/build/Makefile
+        find ${{github.workspace}} ! -name build.sh ! -name main.cpp ! -name CMakeLists.txt -type f -delete
+        mv ${{github.workspace}}/build/mglyphs ${{github.workspace}}
+        rm -r ${{github.workspace}}/build
+        # rm -r ${{github.workspace}}/build/CMakeFiles
+        # rm ${{github.workspace}}/build/*.cmake
+        # rm ${{github.workspace}}/build/CMakeCache.txt
+        # rm ${{github.workspace}}/build/Makefile
     - name: mglyphs macOS Artifact
       uses: actions/upload-artifact@v4
       with:
@@ -41,10 +44,13 @@ jobs:
       run: ./build.sh
     - name: Remove build-only process files
       run: |
-        rm -r ${{github.workspace}}/build/CMakeFiles
-        rm ${{github.workspace}}/build/*.cmake
-        rm ${{github.workspace}}/build/CMakeCache.txt
-        rm ${{github.workspace}}/build/Makefile
+        find ${{github.workspace}} ! -name build.sh ! -name main.cpp ! -name CMakeLists.txt -type f -delete
+        mv ${{github.workspace}}/build/mglyphs ${{github.workspace}}
+        rm -r ${{github.workspace}}/build
+        # rm -r ${{github.workspace}}/build/CMakeFiles
+        # rm ${{github.workspace}}/build/*.cmake
+        # rm ${{github.workspace}}/build/CMakeCache.txt
+        # rm ${{github.workspace}}/build/Makefile
     - name: mglyphs Linux Artifact
       uses: actions/upload-artifact@v4
       with:
