@@ -12,8 +12,8 @@
 	- click on the lastest/top workflow run
 	- scroll down to Artifacts and download the file for MacOS or Linux
 	- Uncompress it and open its folder
-	- Within that folder run *Terminal* (or equivalent) and type and Enter: `sudo chmod +x mglyphs` (your permition the execute **mglyphs**)
-	- Run **mglyphs** by typing and Enter: `./mglyphs -s d` 
+	<!-- - Within that folder run *Terminal* (or equivalent) and type and Enter: `sudo chmod +x mglyphs` (your permition the execute **mglyphs**) -->
+	- Within that folder run *Terminal* (or equivalent) and run **mglyphs** by typing and Enter: `./mglyphs -s d` 
 
 ### Manual
 **mglyphs** returns a list of scales, modes, chords in a scales (notes names and MIDI values) based on user's key/octave input.
